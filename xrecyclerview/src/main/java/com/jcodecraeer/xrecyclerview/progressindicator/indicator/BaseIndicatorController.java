@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.View;
+
 import java.util.List;
 
 /**
@@ -56,7 +57,7 @@ public abstract class BaseIndicatorController {
      * @param canvas
      * @param paint
      */
-    public abstract void draw(Canvas canvas,Paint paint);
+    public abstract void draw(Canvas canvas, Paint paint);
 
     /**
      * create animation or animations

@@ -43,7 +43,7 @@ public class LineScalePartyIndicator extends BaseIndicatorController {
         long[] delays=new long[]{770, 290, 280, 740};
         for (int i = 0; i < 4; i++) {
             final int index=i;
-            ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.4f,1);
+            ValueAnimator scaleAnim= ValueAnimator.ofFloat(1,0.4f,1);
             scaleAnim.setDuration(durations[i]);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);

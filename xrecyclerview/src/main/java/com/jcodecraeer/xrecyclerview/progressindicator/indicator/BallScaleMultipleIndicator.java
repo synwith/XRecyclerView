@@ -33,7 +33,7 @@ public class BallScaleMultipleIndicator extends BaseIndicatorController {
         long[] delays=new long[]{0, 200, 400};
         for (int i = 0; i < 3; i++) {
             final int index=i;
-            ValueAnimator scaleAnim=ValueAnimator.ofFloat(0,1);
+            ValueAnimator scaleAnim= ValueAnimator.ofFloat(0,1);
             scaleAnim.setInterpolator(new LinearInterpolator());
             scaleAnim.setDuration(1000);
             scaleAnim.setRepeatCount(-1);
@@ -47,7 +47,7 @@ public class BallScaleMultipleIndicator extends BaseIndicatorController {
             scaleAnim.setStartDelay(delays[i]);
             scaleAnim.start();
 
-            ValueAnimator alphaAnim=ValueAnimator.ofInt(255,0);
+            ValueAnimator alphaAnim= ValueAnimator.ofInt(255,0);
             alphaAnim.setInterpolator(new LinearInterpolator());
             alphaAnim.setDuration(1000);
             alphaAnim.setRepeatCount(-1);

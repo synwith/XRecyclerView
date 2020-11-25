@@ -4,6 +4,7 @@ package com.jcodecraeer.xrecyclerview.progressindicator.indicator;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.view.animation.LinearInterpolator;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,13 +23,13 @@ public class BallZigZagDeflectIndicator extends com.jcodecraeer.xrecyclerview.pr
         float startY=getWidth()/6;
         for (int i = 0; i < 2; i++) {
             final int index=i;
-            ValueAnimator translateXAnim=ValueAnimator.ofFloat(startX,getWidth()-startX,startX,getWidth()-startX,startX);
+            ValueAnimator translateXAnim= ValueAnimator.ofFloat(startX,getWidth()-startX,startX,getWidth()-startX,startX);
             if (i==1){
-                translateXAnim=ValueAnimator.ofFloat(getWidth()-startX,startX,getWidth()-startX,startX,getWidth()-startX);
+                translateXAnim= ValueAnimator.ofFloat(getWidth()-startX,startX,getWidth()-startX,startX,getWidth()-startX);
             }
-            ValueAnimator translateYAnim=ValueAnimator.ofFloat(startY,startY,getHeight()-startY,getHeight()-startY,startY);
+            ValueAnimator translateYAnim= ValueAnimator.ofFloat(startY,startY,getHeight()-startY,getHeight()-startY,startY);
             if (i==1){
-                translateYAnim=ValueAnimator.ofFloat(getHeight()-startY,getHeight()-startY,startY,startY,getHeight()-startY);
+                translateYAnim= ValueAnimator.ofFloat(getHeight()-startY,getHeight()-startY,startY,startY,getHeight()-startY);
             }
 
             translateXAnim.setDuration(2000);

@@ -41,9 +41,9 @@ public class CubeTransitionIndicator extends BaseIndicatorController {
         for (int i = 0; i < 2; i++) {
             final int index=i;
             translateX[index]=startX;
-            ValueAnimator translationXAnim=ValueAnimator.ofFloat(startX,getWidth()-startX,getWidth()-startX, startX,startX);
+            ValueAnimator translationXAnim= ValueAnimator.ofFloat(startX,getWidth()-startX,getWidth()-startX, startX,startX);
             if (i==1){
-                translationXAnim=ValueAnimator.ofFloat(getWidth()-startX,startX,startX, getWidth()-startX,getWidth()-startX);
+                translationXAnim= ValueAnimator.ofFloat(getWidth()-startX,startX,startX, getWidth()-startX,getWidth()-startX);
             }
             translationXAnim.setInterpolator(new LinearInterpolator());
             translationXAnim.setDuration(1600);
@@ -57,9 +57,9 @@ public class CubeTransitionIndicator extends BaseIndicatorController {
             });
             translationXAnim.start();
             translateY[index]=startY;
-            ValueAnimator translationYAnim=ValueAnimator.ofFloat(startY,startY,getHeight()-startY,getHeight()- startY,startY);
+            ValueAnimator translationYAnim= ValueAnimator.ofFloat(startY,startY,getHeight()-startY,getHeight()- startY,startY);
             if (i==1){
-                translationYAnim=ValueAnimator.ofFloat(getHeight()-startY,getHeight()-startY,startY,startY,getHeight()-startY);
+                translationYAnim= ValueAnimator.ofFloat(getHeight()-startY,getHeight()-startY,startY,startY,getHeight()-startY);
             }
             translationYAnim.setDuration(1600);
             translationYAnim.setInterpolator(new LinearInterpolator());
@@ -77,7 +77,7 @@ public class CubeTransitionIndicator extends BaseIndicatorController {
             animators.add(translationYAnim);
         }
 
-        ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.5f,1,0.5f,1);
+        ValueAnimator scaleAnim= ValueAnimator.ofFloat(1,0.5f,1,0.5f,1);
         scaleAnim.setDuration(1600);
         scaleAnim.setInterpolator(new LinearInterpolator());
         scaleAnim.setRepeatCount(-1);
@@ -90,7 +90,7 @@ public class CubeTransitionIndicator extends BaseIndicatorController {
         });
         scaleAnim.start();
 
-        ValueAnimator rotateAnim=ValueAnimator.ofFloat(0,180,360,1.5f*360,2*360);
+        ValueAnimator rotateAnim= ValueAnimator.ofFloat(0,180,360,1.5f*360,2*360);
         rotateAnim.setDuration(1600);
         rotateAnim.setInterpolator(new LinearInterpolator());
         rotateAnim.setRepeatCount(-1);

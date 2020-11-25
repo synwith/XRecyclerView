@@ -4,19 +4,20 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+
+import androidx.annotation.NonNull;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -190,7 +191,7 @@ public class XRecyclerView extends RecyclerView {
     }
 
     @SuppressWarnings("all")
-    public void setFootView(@NonNull final View view,@NonNull CustomFooterViewCallBack footerViewCallBack) {
+    public void setFootView(@NonNull final View view, @NonNull CustomFooterViewCallBack footerViewCallBack) {
         if(view == null || footerViewCallBack == null){
             return;
         }
@@ -220,7 +221,7 @@ public class XRecyclerView extends RecyclerView {
         isLoadingData = false;
         isNoMore = noMore;
         if (mFootView instanceof LoadingMoreFooter) {
-            ((LoadingMoreFooter) mFootView).setState(isNoMore ? LoadingMoreFooter.STATE_NOMORE:LoadingMoreFooter.STATE_COMPLETE);
+            ((LoadingMoreFooter) mFootView).setState(isNoMore ? LoadingMoreFooter.STATE_NOMORE: LoadingMoreFooter.STATE_COMPLETE);
         } else {
             if(footerViewCallBack != null){
                 footerViewCallBack.onSetNoMore(mFootView,noMore);
@@ -348,7 +349,7 @@ public class XRecyclerView extends RecyclerView {
     // by lgh on 2017-11-13 23:55
 
     // example: listData.remove(position); You can also see a demo on LinearActivity
-    public<T> void notifyItemRemoved(List<T> listData,int position) {
+    public<T> void notifyItemRemoved(List<T> listData, int position) {
         if(mWrapAdapter.adapter == null)
             return;
         int headerSize = getHeaders_includingRefreshCount();
@@ -357,7 +358,7 @@ public class XRecyclerView extends RecyclerView {
         mWrapAdapter.adapter.notifyItemRangeChanged(headerSize, listData.size(),new Object());
     }
     
-    public<T> void notifyItemInserted(List<T> listData,int position) {
+    public<T> void notifyItemInserted(List<T> listData, int position) {
         if(mWrapAdapter.adapter == null)
             return;
         int headerSize = getHeaders_includingRefreshCount();
@@ -373,7 +374,7 @@ public class XRecyclerView extends RecyclerView {
         mWrapAdapter.adapter.notifyItemChanged(adjPos);
     }
 
-    public void notifyItemChanged(int position,Object o) {
+    public void notifyItemChanged(int position, Object o) {
         if(mWrapAdapter.adapter == null)
             return;
         int adjPos = position + getHeaders_includingRefreshCount();
@@ -598,7 +599,7 @@ public class XRecyclerView extends RecyclerView {
 
         // some times we need to override this
         @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position,List<Object> payloads) {
+        public void onBindViewHolder(RecyclerView.ViewHolder holder, int position, List<Object> payloads) {
             if (isHeader(position) || isRefreshHeader(position)) {
                 return;
             }

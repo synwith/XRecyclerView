@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/16.
  */
-public class BallGridPulseIndicator extends BaseIndicatorController{
+public class BallGridPulseIndicator extends BaseIndicatorController {
 
     public static final int ALPHA=255;
 
@@ -68,7 +68,7 @@ public class BallGridPulseIndicator extends BaseIndicatorController{
 
         for (int i = 0; i < 9; i++) {
             final int index=i;
-            ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.5f,1);
+            ValueAnimator scaleAnim= ValueAnimator.ofFloat(1,0.5f,1);
             scaleAnim.setDuration(durations[i]);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);
@@ -81,7 +81,7 @@ public class BallGridPulseIndicator extends BaseIndicatorController{
             });
             scaleAnim.start();
 
-            ValueAnimator alphaAnim=ValueAnimator.ofInt(255, 210, 122, 255);
+            ValueAnimator alphaAnim= ValueAnimator.ofInt(255, 210, 122, 255);
             alphaAnim.setDuration(durations[i]);
             alphaAnim.setRepeatCount(-1);
             alphaAnim.setStartDelay(delays[i]);

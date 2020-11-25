@@ -24,7 +24,7 @@ public class SemiCircleSpinIndicator extends BaseIndicatorController {
     @Override
     public List<Animator> createAnimation() {
         List<Animator> animators=new ArrayList<>();
-        ObjectAnimator rotateAnim=ObjectAnimator.ofFloat(getTarget(),"rotation",0,180,360);
+        ObjectAnimator rotateAnim= ObjectAnimator.ofFloat(getTarget(),"rotation",0,180,360);
         rotateAnim.setDuration(600);
         rotateAnim.setRepeatCount(-1);
         rotateAnim.start();

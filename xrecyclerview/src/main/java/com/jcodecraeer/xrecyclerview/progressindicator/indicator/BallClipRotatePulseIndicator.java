@@ -49,7 +49,7 @@ public class BallClipRotatePulseIndicator extends BaseIndicatorController {
 
     @Override
     public List<Animator> createAnimation() {
-        ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.3f,1);
+        ValueAnimator scaleAnim= ValueAnimator.ofFloat(1,0.3f,1);
         scaleAnim.setDuration(1000);
         scaleAnim.setRepeatCount(-1);
         scaleAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -61,7 +61,7 @@ public class BallClipRotatePulseIndicator extends BaseIndicatorController {
         });
         scaleAnim.start();
 
-        ValueAnimator scaleAnim2=ValueAnimator.ofFloat(1,0.6f,1);
+        ValueAnimator scaleAnim2= ValueAnimator.ofFloat(1,0.6f,1);
         scaleAnim2.setDuration(1000);
         scaleAnim2.setRepeatCount(-1);
         scaleAnim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -73,7 +73,7 @@ public class BallClipRotatePulseIndicator extends BaseIndicatorController {
         });
         scaleAnim2.start();
 
-        ValueAnimator rotateAnim=ValueAnimator.ofFloat(0, 180,360);
+        ValueAnimator rotateAnim= ValueAnimator.ofFloat(0, 180,360);
         rotateAnim.setDuration(1000);
         rotateAnim.setRepeatCount(-1);
         rotateAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

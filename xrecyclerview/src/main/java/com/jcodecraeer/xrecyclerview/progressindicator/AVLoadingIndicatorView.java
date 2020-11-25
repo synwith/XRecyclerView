@@ -7,9 +7,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
-import android.support.annotation.IntDef;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.IntDef;
 
 import com.jcodecraeer.xrecyclerview.R;
 import com.jcodecraeer.xrecyclerview.progressindicator.indicator.BallBeatIndicator;
@@ -76,7 +77,7 @@ import com.jcodecraeer.xrecyclerview.progressindicator.indicator.TriangleSkewSpi
  .SemiCircleSpin
  *
  */
-public class AVLoadingIndicatorView extends View{
+public class AVLoadingIndicatorView extends View {
     //indicators
     public static final int BallPulse=0;
     public static final int BallGridPulse=1;

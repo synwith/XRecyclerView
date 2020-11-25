@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/16.
  */
-public class BallPulseIndicator extends BaseIndicatorController{
+public class BallPulseIndicator extends BaseIndicatorController {
 
     public static final float SCALE=1.0f;
 
@@ -45,7 +45,7 @@ public class BallPulseIndicator extends BaseIndicatorController{
         for (int i = 0; i < 3; i++) {
             final int index=i;
             
-            ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.3f,1);
+            ValueAnimator scaleAnim= ValueAnimator.ofFloat(1,0.3f,1);
             
             scaleAnim.setDuration(750);
             scaleAnim.setRepeatCount(-1);

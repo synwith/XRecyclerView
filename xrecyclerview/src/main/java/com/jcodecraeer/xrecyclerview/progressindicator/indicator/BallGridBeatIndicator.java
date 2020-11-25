@@ -54,7 +54,7 @@ public class BallGridBeatIndicator extends BaseIndicatorController {
 
         for (int i = 0; i < 9; i++) {
             final int index=i;
-            ValueAnimator alphaAnim=ValueAnimator.ofInt(255, 168,255);
+            ValueAnimator alphaAnim= ValueAnimator.ofInt(255, 168,255);
             alphaAnim.setDuration(durations[i]);
             alphaAnim.setRepeatCount(-1);
             alphaAnim.setStartDelay(delays[i]);

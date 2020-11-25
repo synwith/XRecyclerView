@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/17.
  */
-public class BallClipRotateMultipleIndicator extends BaseIndicatorController{
+public class BallClipRotateMultipleIndicator extends BaseIndicatorController {
 
     float scaleFloat=1,degrees;
 
@@ -54,7 +54,7 @@ public class BallClipRotateMultipleIndicator extends BaseIndicatorController{
     @Override
     public List<Animator> createAnimation() {
         List<Animator> animators=new ArrayList<>();
-        ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.6f,1);
+        ValueAnimator scaleAnim= ValueAnimator.ofFloat(1,0.6f,1);
         scaleAnim.setDuration(1000);
         scaleAnim.setRepeatCount(-1);
         scaleAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -66,7 +66,7 @@ public class BallClipRotateMultipleIndicator extends BaseIndicatorController{
         });
         scaleAnim.start();
 
-        ValueAnimator rotateAnim=ValueAnimator.ofFloat(0, 180,360);
+        ValueAnimator rotateAnim= ValueAnimator.ofFloat(0, 180,360);
         rotateAnim.setDuration(1000);
         rotateAnim.setRepeatCount(-1);
         rotateAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

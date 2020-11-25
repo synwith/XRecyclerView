@@ -37,7 +37,7 @@ public class BallPulseSyncIndicator extends BaseIndicatorController {
         int[] delays=new int[]{70,140,210};
         for (int i = 0; i < 3; i++) {
             final int index=i;
-            ValueAnimator scaleAnim=ValueAnimator.ofFloat(getHeight()/2,getHeight()/2-radius*2,getHeight()/2);
+            ValueAnimator scaleAnim= ValueAnimator.ofFloat(getHeight()/2,getHeight()/2-radius*2,getHeight()/2);
             scaleAnim.setDuration(600);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);

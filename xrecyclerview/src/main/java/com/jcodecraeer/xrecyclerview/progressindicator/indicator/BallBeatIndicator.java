@@ -48,7 +48,7 @@ public class BallBeatIndicator extends com.jcodecraeer.xrecyclerview.progressind
         int[] delays=new int[]{350,0,350};
         for (int i = 0; i < 3; i++) {
             final int index=i;
-            ValueAnimator scaleAnim=ValueAnimator.ofFloat(1,0.75f,1);
+            ValueAnimator scaleAnim= ValueAnimator.ofFloat(1,0.75f,1);
             scaleAnim.setDuration(700);
             scaleAnim.setRepeatCount(-1);
             scaleAnim.setStartDelay(delays[i]);
@@ -61,7 +61,7 @@ public class BallBeatIndicator extends com.jcodecraeer.xrecyclerview.progressind
             });
             scaleAnim.start();
 
-            ValueAnimator alphaAnim=ValueAnimator.ofInt(255,51,255);
+            ValueAnimator alphaAnim= ValueAnimator.ofInt(255,51,255);
             alphaAnim.setDuration(700);
             alphaAnim.setRepeatCount(-1);
             alphaAnim.setStartDelay(delays[i]);

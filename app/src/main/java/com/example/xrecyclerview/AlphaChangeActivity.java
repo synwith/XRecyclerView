@@ -2,11 +2,12 @@ package com.example.xrecyclerview;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
@@ -16,7 +17,6 @@ import java.util.ArrayList;
 /**
  * Created by LinGuanHong on 2017/3/30.
  */
-
 public class AlphaChangeActivity extends AppCompatActivity {
 
     private XRecyclerView mRecyclerView;

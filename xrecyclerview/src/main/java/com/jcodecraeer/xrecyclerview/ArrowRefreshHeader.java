@@ -105,7 +105,7 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
 
         //init the progress view
 		mProgressBar = (SimpleViewSwitcher)findViewById(R.id.listview_header_progressbar);
-        progressView = new  AVLoadingIndicatorView(getContext());
+        progressView = new AVLoadingIndicatorView(getContext());
         progressView.setIndicatorColor(0xffB5B5B5);
         progressView.setIndicatorId(ProgressStyle.BallSpinFadeLoader);
         if(mProgressBar != null)
@@ -121,7 +121,7 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
 		mRotateDownAnim.setFillAfter(true);
 		
 		mHeaderTimeView = (TextView)findViewById(R.id.last_refresh_time);
-		measure(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+		measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 		mMeasuredHeight = getMeasuredHeight();
 	}
 
@@ -201,7 +201,7 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
         }
         SharedPreferences s =
                 getContext()
-                    .getSharedPreferences(spKeyName,Context.MODE_APPEND);
+                    .getSharedPreferences(spKeyName, Context.MODE_APPEND);
         return s.getLong(XR_REFRESH_TIME_KEY,new Date().getTime());
     }
 
@@ -212,7 +212,7 @@ public class ArrowRefreshHeader extends LinearLayout implements BaseRefreshHeade
         }
         SharedPreferences s =
                 getContext()
-                    .getSharedPreferences(spKeyName,Context.MODE_APPEND);
+                    .getSharedPreferences(spKeyName, Context.MODE_APPEND);
         s.edit().putLong(XR_REFRESH_TIME_KEY,refreshTime).commit();
     }
 

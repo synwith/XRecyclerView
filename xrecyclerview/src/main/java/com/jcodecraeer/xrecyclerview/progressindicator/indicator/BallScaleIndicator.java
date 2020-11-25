@@ -29,7 +29,7 @@ public class BallScaleIndicator extends BaseIndicatorController {
     @Override
     public List<Animator> createAnimation() {
         List<Animator> animators=new ArrayList<>();
-        ValueAnimator scaleAnim=ValueAnimator.ofFloat(0,1);
+        ValueAnimator scaleAnim= ValueAnimator.ofFloat(0,1);
         scaleAnim.setInterpolator(new LinearInterpolator());
         scaleAnim.setDuration(1000);
         scaleAnim.setRepeatCount(-1);
@@ -42,7 +42,7 @@ public class BallScaleIndicator extends BaseIndicatorController {
         });
         scaleAnim.start();
 
-        ValueAnimator alphaAnim=ValueAnimator.ofInt(255, 0);
+        ValueAnimator alphaAnim= ValueAnimator.ofInt(255, 0);
         alphaAnim.setInterpolator(new LinearInterpolator());
         alphaAnim.setDuration(1000);
         alphaAnim.setRepeatCount(-1);

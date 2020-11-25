@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/16.
  */
-public class PacmanIndicator extends BaseIndicatorController{
+public class PacmanIndicator extends BaseIndicatorController {
 
     private float translateX;
 
@@ -27,7 +27,7 @@ public class PacmanIndicator extends BaseIndicatorController{
         drawCircle(canvas,paint);
     }
 
-    private void drawPacman(Canvas canvas,Paint paint){
+    private void drawPacman(Canvas canvas, Paint paint){
         float x=getWidth()/2;
         float y=getHeight()/2;
 
@@ -61,7 +61,7 @@ public class PacmanIndicator extends BaseIndicatorController{
     public List<Animator> createAnimation() {
         List<Animator> animators=new ArrayList<>();
         float startT=getWidth()/11;
-        ValueAnimator translationAnim=ValueAnimator.ofFloat(getWidth()-startT,getWidth()/2);
+        ValueAnimator translationAnim= ValueAnimator.ofFloat(getWidth()-startT,getWidth()/2);
         translationAnim.setDuration(650);
         translationAnim.setInterpolator(new LinearInterpolator());
         translationAnim.setRepeatCount(-1);
@@ -74,7 +74,7 @@ public class PacmanIndicator extends BaseIndicatorController{
         });
         translationAnim.start();
 
-        ValueAnimator alphaAnim=ValueAnimator.ofInt(255,122);
+        ValueAnimator alphaAnim= ValueAnimator.ofInt(255,122);
         alphaAnim.setDuration(650);
         alphaAnim.setRepeatCount(-1);
         alphaAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -86,7 +86,7 @@ public class PacmanIndicator extends BaseIndicatorController{
         });
         alphaAnim.start();
 
-        ValueAnimator rotateAnim1=ValueAnimator.ofFloat(0, 45, 0);
+        ValueAnimator rotateAnim1= ValueAnimator.ofFloat(0, 45, 0);
         rotateAnim1.setDuration(650);
         rotateAnim1.setRepeatCount(-1);
         rotateAnim1.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -98,7 +98,7 @@ public class PacmanIndicator extends BaseIndicatorController{
         });
         rotateAnim1.start();
 
-        ValueAnimator rotateAnim2=ValueAnimator.ofFloat(0,-45,0);
+        ValueAnimator rotateAnim2= ValueAnimator.ofFloat(0,-45,0);
         rotateAnim2.setDuration(650);
         rotateAnim2.setRepeatCount(-1);
         rotateAnim2.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

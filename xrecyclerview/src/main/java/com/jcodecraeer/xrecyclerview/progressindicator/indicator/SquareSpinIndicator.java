@@ -24,9 +24,9 @@ public class SquareSpinIndicator extends BaseIndicatorController {
     @Override
     public List<Animator> createAnimation() {
         List<Animator> animators=new ArrayList<>();
-        PropertyValuesHolder rotation5=PropertyValuesHolder.ofFloat("rotationX",0,180,180,0,0);
-        PropertyValuesHolder rotation6=PropertyValuesHolder.ofFloat("rotationY",0,0,180,180,0);
-        ObjectAnimator animator=ObjectAnimator.ofPropertyValuesHolder(getTarget(), rotation6,rotation5);
+        PropertyValuesHolder rotation5= PropertyValuesHolder.ofFloat("rotationX",0,180,180,0,0);
+        PropertyValuesHolder rotation6= PropertyValuesHolder.ofFloat("rotationY",0,0,180,180,0);
+        ObjectAnimator animator= ObjectAnimator.ofPropertyValuesHolder(getTarget(), rotation6,rotation5);
         animator.setInterpolator(new LinearInterpolator());
         animator.setRepeatCount(-1);
         animator.setDuration(2500);

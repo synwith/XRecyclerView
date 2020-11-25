@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Jack on 2015/10/17.
  */
-public class BallPulseRiseIndicator extends BaseIndicatorController{
+public class BallPulseRiseIndicator extends BaseIndicatorController {
 
     @Override
     public void draw(Canvas canvas, Paint paint) {
@@ -28,8 +28,8 @@ public class BallPulseRiseIndicator extends BaseIndicatorController{
 
     @Override
     public List<Animator> createAnimation() {
-        PropertyValuesHolder rotation6=PropertyValuesHolder.ofFloat("rotationX",0,360);
-        ObjectAnimator animator=ObjectAnimator.ofPropertyValuesHolder(getTarget(), rotation6);
+        PropertyValuesHolder rotation6= PropertyValuesHolder.ofFloat("rotationX",0,360);
+        ObjectAnimator animator= ObjectAnimator.ofPropertyValuesHolder(getTarget(), rotation6);
         animator.setInterpolator(new LinearInterpolator());
         animator.setRepeatCount(-1);
         animator.setDuration(1500);
